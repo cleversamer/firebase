@@ -2,10 +2,13 @@ const { initializeApp } = require("firebase/app");
 const {
   getFirestore,
   collection,
+  onSnapshot,
   getDocs,
   addDoc,
   deleteDoc,
   doc,
+  query,
+  where,
 } = require("firebase/firestore");
 
 const config = {
@@ -26,14 +29,16 @@ const db = getFirestore();
 // collection ref
 const collectionRef = collection(db, "books");
 
+// Reusable arrow functions
+const parseData = (snapshot) => {
+  let books = [];
+  snapshot.docs.forEach((doc) => books.push({ id: doc.id, ...doc.data() }));
+  console.log(books);
+};
+const handleError = (err) => console.error(err);
+
 // get collection data
-getDocs(collectionRef)
-  .then((snapshot) => {
-    let books = [];
-    snapshot.docs.forEach((doc) => books.push({ id: doc.id, ...doc.data() }));
-    console.log(books);
-  })
-  .catch((err) => console.error(err));
+getDocs(collectionRef).then(parseData).catch(handleError);
 
 // Add documents
 const addBookForm = document.querySelector(".add");
@@ -53,3 +58,10 @@ deleteBookForm.addEventListener("submit", (event) => {
   const docRef = doc(db, "books", bookId);
   deleteDoc(docRef).then(() => deleteBookForm.reset());
 });
+
+// Subscribe to firebase (Realtime connection).
+// onSnapshot(collectionRef, parseData);
+
+// Queries
+const firestoreQuery = query(collectionRef, where("author", "==", "Samer A."));
+onSnapshot(firestoreQuery, parseData);
