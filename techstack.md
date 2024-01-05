@@ -28,7 +28,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [cleversamerr/firebase](https://github.com/cleversamerr/firebase)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|6<br/>Tools used|12/24/23 <br/>Report generated|
+|6<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
