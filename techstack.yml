@@ -2,7 +2,7 @@ repo_name: cleversamerr/firebase
 report_id: 44ff738b984952b3621f4737cccacfbe
 version: 0.1
 repo_type: Public
-timestamp: '2023-12-24T12:42:24+00:00'
+timestamp: '2024-01-05T08:16:07+00:00'
 requested_by: cleversamerr
 provider: github
 branch: main
@@ -17,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/cleversamerr/firebase
   detection_source: Repo Metadata
 - name: Firebase
   description: The Realtime App Platform
@@ -26,6 +27,7 @@ tools:
   category: Application Hosting
   sub_category: Realtime Backend / API
   image_url: https://img.stackshare.io/service/116/cZLxNFZS.jpg
+  detection_source_url: https://github.com/cleversamerr/firebase/blob/main/package.json
   detection_source: package.json
   last_updated_by: Samer A
   last_updated_on: 2022-03-14 08:37:36.000000000 Z
@@ -37,6 +39,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/cleversamerr/firebase
   detection_source: Repo Metadata
 - name: Webpack
   description: A bundler for javascript and friends
@@ -60,6 +63,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/cleversamerr/firebase/blob/main/package.json
   detection_source: package.json
   last_updated_by: Samer A
   last_updated_on: 2022-03-14 08:37:36.000000000 Z
